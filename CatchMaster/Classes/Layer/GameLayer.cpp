@@ -20,7 +20,7 @@ bool GameLayer::init() {
   }
 
   // Welcome Message
-  Size visiableSize = Director::getInstance()->getVisibleSize();
+  //Size visiableSize = Director::getInstance()->getVisibleSize();
   Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
   ///////////////////////////////////////////////////////////////////////////////

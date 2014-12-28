@@ -44,7 +44,7 @@ bool WelcomeLayer::init()
 /**
  *  @author shixinzhu
  *
- *  Description
+ *  callback
  *
  *  @param sender sender description
  */
