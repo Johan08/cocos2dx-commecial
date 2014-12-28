@@ -26,9 +26,10 @@ bool GameLayer::init() {
   ///////////////////////////////////////////////////////////////////////////////
 
   // MotionStreakを作成
-  m_pStreak =
-      MotionStreak::create(1.0, 1.0f, 3.0f, Color3B::GREEN, "arrow01.png");
+  m_pStreak = MotionStreak::create(1.0, 1.0f, 3.0f, Color3B::GREEN, "arrow01.png");
   addChild(m_pStreak);
+    
+   //CCLOGINFO("%s %d deallocing demo : %p", __FUNCTION__, __LINE__, this);
 
   //イベントリスナー作成
   auto listener = EventListenerTouchOneByOne::create();

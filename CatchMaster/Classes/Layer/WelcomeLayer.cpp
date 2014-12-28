@@ -27,9 +27,9 @@ bool WelcomeLayer::init()
     Sprite *buttonNormal = Sprite::create("CloseNormal.png");
     Sprite *buttonClose  = Sprite::create("CloseSelected.png");
     
-    auto label = LabelTTF::create("Start Game", "Arial", 24);
-    label->setPosition(windowSize.width / 2, windowSize.height / 2);
-    this->addChild(label);
+//    auto label = LabelTTF::create("Start Game", "Arial", 24);
+//    label->setPosition(windowSize.width / 2, windowSize.height / 2);
+//    this->addChild(label);
     
     auto menuItem  = MenuItemSprite::create(buttonNormal,buttonClose,NULL,CC_CALLBACK_1(WelcomeLayer::menuCallback, this));
     menuItem->setPosition(Point(origin.x + windowSize.width/2 ,origin.y + windowSize.height*2/5));
