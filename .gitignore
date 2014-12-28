@@ -1,0 +1,9 @@
+================== common project file not commit ====================
+CatchMaster/proj.android/*
+CatchMaster/proj.ios_mac/*
+CatchMaster/proj.linux/*
+CatchMaster/proj.wp8-xaml/*
+CatchMaster/proj.win32/*
+
+=================== common framework files not commit =================
+CatchMaster/cocos2d/*
