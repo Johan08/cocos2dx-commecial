@@ -10,6 +10,8 @@
 #define CatchMaster_WeaponLayer_H
 
 #include "cocos2d.h"
+#include "../Scene/GameScene.h"
+
 USING_NS_CC;
 
 class WeaponLayer : public Layer

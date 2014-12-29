@@ -63,7 +63,8 @@ void PageViewLayer::pageviewCallBack(Ref* sender, PageViewEventType type)
     //選択されているページをログに出力
     log("%ld", pageView->getCurPageIndex() + 1);
 
-    if (pageView->getCurPageIndex() == 3) {
+    if (pageView->getCurPageIndex() == 3)
+    {
       auto scene = MenuView::create();
       TransitionScene* transition = TransitionFade::create(1, scene);
       Director::getInstance()->replaceScene(transition);

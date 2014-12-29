@@ -8,21 +8,6 @@
 
 #include "WeaponView.h"
 
-//Scene* WeaponView::createScene()
-//{
-//    // 'scene' is an autorelease object
-//    auto scene = Scene::create();
-//    
-//    // 'layer' is an autorelease object
-//    auto layer = WeaponView::create();
-//
-//    // add layer as a child to scene
-//    scene->addChild(layer);
-//
-//    // return the scene
-//    return scene;
-//}
-
 // on "init" you need to initiallize your instance
 bool WeaponView::init()
 {
@@ -33,19 +18,9 @@ bool WeaponView::init()
         return false;
     }
 
-    //Size visibleSize = Director::getInstance()->getVisibleSize();
-    //Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
-
-    // add your code in here...
-
+    auto layer = WeaponLayer::create();
+    this->addChild(layer);
+    
     return true;
 }
 
-void WeaponView::onEnter()
-{
-
-}

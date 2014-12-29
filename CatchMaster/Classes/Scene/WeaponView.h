@@ -12,6 +12,8 @@
 #include "cocos2d.h"
 #include "SimpleAudioEngine.h"
 
+#include "../Layer/WeaponLayer.h"
+
 using namespace cocos2d;
 using namespace CocosDenshion;
 
@@ -21,8 +23,6 @@ public:
     virtual bool init();
 
     CREATE_FUNC(WeaponView);
-    
-    void onEnter() override;
 };
 
 #endif

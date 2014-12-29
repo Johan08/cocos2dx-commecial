@@ -10,6 +10,8 @@
 #define CatchMaster_MenuLayer_H
 
 #include "cocos2d.h"
+#include "../Scene/WeaponView.h"
+
 USING_NS_CC;
 
 class MenuLayer : public Layer

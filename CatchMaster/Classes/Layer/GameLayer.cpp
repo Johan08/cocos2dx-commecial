@@ -9,21 +9,28 @@
 #include "GameLayer.h"
 #include "CCActionInterval.h"
 
-/**
- <#Description#>
- */
-bool GameLayer::init() {
+bool GameLayer::init()
+{
   /////////////////////////////////////////
   // 1.super init first
-  if (!Layer::init()) {
+  if (!Layer::init())
+  {
     return false;
   }
 
   // Welcome Message
-  //Size visiableSize = Director::getInstance()->getVisibleSize();
+  Size visiableSize = Director::getInstance()->getVisibleSize();
   Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    
+  buttonSprite = ButtonSprite::create("pause_button.png");
+  buttonSprite->setAnchorPoint(Point::ZERO);
+  buttonSprite->setPosition(Vec2(visiableSize.width - 60, visiableSize.height - 60));
 
-  ///////////////////////////////////////////////////////////////////////////////
+  this->addChild(buttonSprite, 1);
+
+//  pauseButton = Sprite::create("pause_button.png");
+
+//  this->addChild(pauseButton);
 
   // MotionStreakを作成
   m_pStreak = MotionStreak::create(1.0, 1.0f, 3.0f, Color3B::GREEN, "arrow01.png");
@@ -96,7 +103,8 @@ bool GameLayer::init() {
  *
  *  @param dt <#dt description#>
  */
-void GameLayer::update(float dt) {
+void GameLayer::update(float dt)
+{
   log(">>>>>>> update()");
   //１フレームごとに２px移動させる
   m_pos += Point(2.0, 0);

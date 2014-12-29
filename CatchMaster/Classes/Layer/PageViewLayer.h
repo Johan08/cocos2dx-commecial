@@ -25,7 +25,7 @@ public:
     virtual bool init();
     
     // a selector callback     
-    void menuCallback(Ref* pSender);
+    //void menuCallback(Ref* pSender);
 
     // implement the "static create()" method manually
     CREATE_FUNC(PageViewLayer);

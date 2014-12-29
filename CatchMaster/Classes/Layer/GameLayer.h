@@ -15,6 +15,8 @@
 #include "time.h"
 
 #include "../Sprite/BugSprite.h"
+#include "../Sprite/ButtonSprite.h"
+
 
 USING_NS_CC;
 using namespace std;
@@ -101,11 +103,15 @@ class GameLayer : public Layer {
   PhysicsWorld* world;
 
   BugSprite* bug;
+    
+  ButtonSprite* buttonSprite;
+    
+  //  pause button
+  //Sprite *pauseButton;
 
  private:
   MotionStreak* m_pStreak;  //インスタンスをメンバ変数として用意
-  Point m_pos;
-  　　　　　　　　  //MotionStreakの位置
+  Point m_pos;              //MotionStreakの位置
 };
 
 #endif  // CatchMaster_GameLayer_H

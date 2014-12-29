@@ -12,6 +12,8 @@
 #include "cocos2d.h"
 #include "SimpleAudioEngine.h"
 
+#include "../Layer/MenuLayer.h"
+
 using namespace cocos2d;
 using namespace CocosDenshion;
 
@@ -22,7 +24,7 @@ public:
 
     CREATE_FUNC(MenuView);
     
-    void onEnter() override;
+    //void onEnter() override;
 };
 
 #endif
