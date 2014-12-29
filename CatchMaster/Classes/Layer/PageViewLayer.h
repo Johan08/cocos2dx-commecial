@@ -10,7 +10,12 @@
 #define CatchMaster_PageViewLayer_H
 
 #include "cocos2d.h"
-USING_NS_CC;
+#include <ui/CocosGUI.h>
+
+#include "../Scene/MenuView.h"
+
+using namespace cocos2d;
+using namespace ui;
 
 class PageViewLayer : public Layer
 {
@@ -24,6 +29,9 @@ public:
 
     // implement the "static create()" method manually
     CREATE_FUNC(PageViewLayer);
+    
+    // pageview controller
+    void pageviewCallBack(Ref * psender, PageViewEventType type);
 };
 
 #endif // CatchMaster_PageViewLayer_H

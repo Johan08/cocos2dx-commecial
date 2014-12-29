@@ -35,7 +35,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     //auto scene = HelloWorld::createScene();
     //auto scene = LoadingScene::create();
     
-    auto scene = PageViewScene::createScene();
+    auto scene = PageViewScene::create();
 
     // run
     director->runWithScene(scene);
@@ -62,7 +62,7 @@ void AppDelegate::applicationWillEnterForeground() {
 void AppDelegate::setResourceSearchResolution()
 {
     std::vector<std::string> paths;
-	paths.push_back("fonts");
+    paths.push_back("fonts");
     paths.push_back("image");
     paths.push_back("sounds");
     FileUtils::getInstance()->setSearchResolutionsOrder(paths);

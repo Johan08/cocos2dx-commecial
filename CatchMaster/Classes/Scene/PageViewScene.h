@@ -11,24 +11,23 @@
 
 #include "cocos2d.h"
 #include "SimpleAudioEngine.h"
-#include <ui/CocosGUI.h>
+
+
+#include "../Layer/PageViewLayer.h"
 
 #include "GameScene.h"
 
 using namespace cocos2d;
-using namespace ui;
+
 using namespace CocosDenshion;
 
-class PageViewScene : public Layer {
+class PageViewScene : public Scene
+{
 public:
-    
-     static Scene* createScene();
     
     virtual bool init();
 
     CREATE_FUNC(PageViewScene);
-    
-    void pageviewCallBack(Ref * psender, PageViewEventType type);
 };
 
 #endif
