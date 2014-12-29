@@ -13,6 +13,7 @@
 #include "SimpleAudioEngine.h"
 
 #include "../Layer/GameLayer.h"
+#include "../Layer/MenuItemLayer.h"
 
 using namespace cocos2d;
 using namespace CocosDenshion;

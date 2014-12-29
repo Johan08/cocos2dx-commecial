@@ -17,13 +17,23 @@ bool GameScene::init()
         this->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
         
         auto gameLayer = GameLayer::create();
-        if(gameLayer) {
+        if (gameLayer)
+        {
             gameLayer->setPhyWorld(this->getPhysicsWorld());
             //gameLayer->setDelegator(statusLayer);
             this->addChild(gameLayer);
         }
         
+        auto menuItemLayer = MenuItemLayer::create();
+        if (menuItemLayer)
+        {
+            this->addChild(menuItemLayer);
+        }
+        menuItemLayer->setVisible(false);
+        menuItemLayer->setTag(1002);
+        
         return true;
+        
     } else
     {
         return false;

@@ -9,6 +9,7 @@
 #define CatchMaster_ButtonSprite_H
 
 #include "cocos2d.h"
+#include "../Layer/MenuItemLayer.h"
 
 USING_NS_CC;
 

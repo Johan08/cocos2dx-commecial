@@ -4,7 +4,6 @@
 //
 //  Created by sxz on 2014/12/29.
 //  Copyright 2014年 hibiya.tech@gmail.com. All rights reserved.
-//
 
 #include "ButtonSprite.h"
 
@@ -62,5 +61,20 @@ void ButtonSprite::addEvents()
 
 void ButtonSprite::touchEvent(Touch* touch)
 {
-    log("touched ButtonSprite");
+    auto scene = getParent()->getParent();
+    
+    if (scene)
+    {
+        auto child = scene->getChildByTag(1002);
+        if (child)
+        {
+            if (child->isVisible())
+            {
+                child->setVisible(false);
+            } else
+            {
+                child->setVisible(true);
+            }
+        }
+    }
 }
