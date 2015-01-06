@@ -4,7 +4,6 @@
 
 #include "Util/SaveData.h"
 
-#include "HelloWorldScene.h"
 #include "ScrollText.h"
 #include "CubeTexture.h"
 
@@ -55,14 +54,15 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
     
     auto scene = PageViewScene::create();
-    
+
     director->runWithScene(scene);
 
     return true;
 }
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
-void AppDelegate::applicationDidEnterBackground() {
+void AppDelegate::applicationDidEnterBackground()
+{
     Director::getInstance()->stopAnimation();
 
     // if you use SimpleAudioEngine, it must be pause
@@ -70,7 +70,8 @@ void AppDelegate::applicationDidEnterBackground() {
 }
 
 // this function will be called when the app is active again
-void AppDelegate::applicationWillEnterForeground() {
+void AppDelegate::applicationWillEnterForeground()
+{
     Director::getInstance()->startAnimation();
 
     // if you use SimpleAudioEngine, it must resume here
@@ -82,6 +83,7 @@ void AppDelegate::setResourceSearchResolution()
     std::vector<std::string> paths;
     paths.push_back("fonts");
     paths.push_back("image");
+    paths.push_back("menuimage");
     paths.push_back("sounds");
     FileUtils::getInstance()->setSearchResolutionsOrder(paths);
     
